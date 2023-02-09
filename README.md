@@ -1,3 +1,3 @@
 # PokedexReactNative
 
-Personal project to apply all the learning that I have acquired over time
+Personal project to apply all the knowledge that I have acquired over time
