@@ -1,8 +1,14 @@
 import axios from 'axios';
+import {GET_POKEMONS} from '../../env.json';
 
-// https://pokeapi.co/api/v2 baseURL pokemon/?limit=100&offset=0
-const pokeApi = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2/',
-});
-
-export default pokeApi;
+class PokeApi {
+  async getPokemons() {
+    return axios({
+      method: 'get',
+      url: GET_POKEMONS,
+    }).then(function (response) {
+      return response.data;
+    });
+  }
+}
+export default new PokeApi();
